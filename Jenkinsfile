@@ -13,6 +13,7 @@ pipeline {
 
         stage('Build'){
             steps{
+                sh "chmod +x -R /HelloWorld"
                 sh 'cd HelloWorld'
                 sh "chmod +x -R /src"
                 sh 'mkdir lib'
