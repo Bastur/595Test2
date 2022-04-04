@@ -22,8 +22,8 @@ pipeline {
                 sh "chmod +x -R ./HelloWorld/src"
                 sh 'mkdir ./HelloWorld/src/lib'
                 sh "ls -all"
-                sh 'cd /HelloWorld/src/lib/ ; wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.7.0/junit-platform-console-standalone-1.7.0-all.jar'
-                sh 'cd HelloWorld/src ; javac -cp "../lib/junit-platform-console-standalone-1.7.0-all.jar" HelloWorldTest.java HelloWorld.java'
+                sh 'cd ./HelloWorld/src/lib/ ; wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.7.0/junit-platform-console-standalone-1.7.0-all.jar'
+                sh 'cd ./HelloWorld/src ; javac -cp "../lib/junit-platform-console-standalone-1.7.0-all.jar" HelloWorldTest.java HelloWorld.java'
             }
         }
 
