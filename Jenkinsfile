@@ -30,13 +30,12 @@ pipeline {
         stage('Test'){
             steps{
                 sh 'cd HelloWorld/src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class HelloWorldTest'
-                junit 'src/reports/*-jupiter.xml'
             }
         }
 
         stage('Deploy'){
             steps{
-                sh 'cd src/ ; java HelloWorld' 
+                sh 'cd ./HelloWorld/src/ ; java HelloWorld' 
             }
         }
     }
