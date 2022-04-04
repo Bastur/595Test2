@@ -13,7 +13,7 @@ pipeline {
 
         stage('Build'){
             steps{
-                sh "chmod rw- /HelloWorld"
+                sh "chmod +x -RW /HelloWorld"
                 dir("/HelloWorld"){
                     sh "pwd"
                 }
