@@ -15,7 +15,7 @@ pipeline {
             steps{
                 sh "ls -all"
                 sh "chmod +x -R ./HelloWorld"
-                sh 'cd HelloWorld'
+                sh 'cd ./HelloWorld'
                 sh "ls -all"
                 sh "chmod +x -R ./src"
                 sh 'mkdir lib'
