@@ -14,7 +14,7 @@ pipeline {
         stage('Build'){
             steps{
                 sh "ls -all"
-                sh "chmod +x -R ./HelloWorld/src"
+                sh "chmod +x -R ./HelloWorld/src/"
                 sh 'mkdir -p ./src/lib'
                 sh "ls ./src/"
                 sh 'cd ./src/lib/ ; wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.7.0/junit-platform-console-standalone-1.7.0-all.jar'
