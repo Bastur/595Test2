@@ -10,7 +10,15 @@ pipeline {
                 [[credentialsId: 'github-ssh-key-1', url: 'git@github.com:Bastur/595Test2.git']]]
             }
         }
-
+        
+        stage('Build) {
+              steps {
+                  sh "chmod +x -R ./HelloWorld"
+                  sh "./HelloWorld/src/HelloWorld.java"
+              }
+          }
+              
+        /*
         stage('Build'){
             steps{
                 sh "ls -all"
@@ -33,6 +41,7 @@ pipeline {
                 sh 'cd ./src/ ; java HelloWorld' 
             }
         }
+        */
     }
 
 }
